@@ -28,11 +28,11 @@ export class AuthService {
 
 
   signupUser(user){
-    return this.http.post<any>(`${this.endpoint}users/signup`, user)
+    return this.http.post<any>(`${this.endpoint}user/signup`, user)
   }
 
   signinUser(user){
-    return this.http.post<any>(`${this.endpoint}users/signin`, user)
+    return this.http.post<any>(`${this.endpoint}user/signin`, user)
   }
 
   login(){
@@ -40,7 +40,7 @@ export class AuthService {
   }
 
   getUsername(){
-    return this.http.get<User[]>(this.endpoint + 'users').pipe(map(this.getUserdata))
+    return this.http.get<User[]>(this.endpoint + 'user').pipe(map(this.getUserdata))
   }
 
 

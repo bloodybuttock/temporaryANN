@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'populer', component:PopulerComponent},
   {path:'detailgame', component:DetailgameComponent,},
   {path:'profile', component:ProfileComponent},
-  {path:'notif', redirectTo:'notif', component:NotifregisterComponent},
+  {path:'notif', component:NotifregisterComponent},
   {path:'chat',  component:ChatComponent},
   // {path: 'admin', loadChildren: () => import('./routes/admin/admin.module').then(m => m.AdminModule),
   //  canActivate: [AuthGuard],data: {userRoles: [Roles.ADMIN,]} },
