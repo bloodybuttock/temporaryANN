@@ -18,26 +18,17 @@ export class GamesService {
     return response.data
   }
 
-
   private getDataGameId(response) {
     return response.data
   }
-
 
   public getGame(): Observable<Games[]> {
     return this.http.get<Games[]>(environment.urlAddress + 'product').pipe(map(this.getDataGame))
   }
 
-  createRuleTournament(game) {
-    return this.http.post<any>(`${environment.urlAddress}/createRules/:id`, game)
+  createRuleTournament(games) {
+      return this.http.post<any>(environment.urlAddress + 'createRules', games);
   }
-
-  createTournament(game) {
-    return this.http.post<any>(`${environment.urlAddress}/createGame/:id`, game)
-  }
-
-
-
 
 
 }
