@@ -4,11 +4,13 @@ import { Role  } from './models/index';
 import { CommentComponent } from './components/comment/comment.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NotifregisterComponent } from './components/notifregister/notifregister.component';
+import { ChatComponent } from './components/chat/chat.component';
 
 import { HomeComponent } from './components/home/home.component';
 import { TeamallComponent } from './components/board/teamall/teamall.component';
 import { PopulerComponent } from './components/games/populer/populer.component';
 import { DetailgameComponent } from './components/detailgame/detailgame.component';
+
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -17,6 +19,7 @@ const routes: Routes = [
   {path:'detailgame', component:DetailgameComponent,},
   {path:'profile', component:ProfileComponent},
   {path:'notif', component:NotifregisterComponent},
+  {path:'chat', component:ChatComponent},
   // {path: 'admin', loadChildren: () => import('./routes/admin/admin.module').then(m => m.AdminModule),
   //  canActivate: [AuthGuard],data: {userRoles: [Roles.ADMIN,]} },
   {path:'admin', loadChildren: () => import('./routes/admin/admin.module').then(m => m.AdminModule)},

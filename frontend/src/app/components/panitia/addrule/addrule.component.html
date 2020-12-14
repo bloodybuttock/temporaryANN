@@ -1,51 +1,41 @@
-<div class="container d-flex justify-content-center mt-100">
-  
-</div>
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-        <div class="card">
-            <div class="card-img"> <img class="img-fluid" src="https://i.imgur.com/4niebFr.jpg"> </div>
-            <div class="card-title">
-                <p>add rule</p>
-            </div>
-            <div class="card-text">
-              <form>
-                <div class="form-group">
-                    <label for="tournamentPicturel">Tournament Picture</label>
-                    <input id="picture" class="form-control" required placeholder="url of image" type="url" name="tournamentPicturel">
-                 </div>
-                <div class="form-group">
-                    <label for="email">Tournament Name</label>
-                    <input id="email" class="form-control" required placeholder="ex FIFA20" type="text" name="email">
-                 </div>
-                 <div class="form-group">
-                    <label for="tournamentType">Type Tournament</label>
-                    <div class="optionbox">
-                  <select>
-                  <option>Select Type game</option>
-                  <option>Free for all</option>
-                  <option>Individuals</option>
-                  </select> </div>
-                  </div>
-                 <div class="form-group">
-                    <label for="tournamentOpen">Tournamnet open</label>
-                    <input id="password" class="form-control" required type="date" name="tournamentOpen">
-                 </div>
-                 <div class="form-group">
-                    <label for="tournamentStart">tournamnet start</label>
-                    <input id="tournamentStart" class="form-control" required type="date" name="tournamentStart">
-                 </div>
-                 <div class="form-group">
-                    <label for="tournamentClose">tournament close</label>
-                    <input id="tournamentClose" class="form-control" required type="date" name="tournamentClose">
-                 </div>
-                 <div class="form-group">
-                    <label for="_tournamentRulesId">_tournamentRulesId</label>
-                    <input id="_tournamentRulesId" class="form-control" required type="text" name="_tournamentRulesId">
-                 </div>
-                 <button type="submit" class="btn btn-primary">Save</button>
-              </form>
-            </div> <button class="btn">Track delivery</button>
-        </div>
-    </div>
-</div>
+<div class="body"></div>
+
+
+		<div class="wrapper fadeInDown">
+		  <div id="formContent">
+		    <div class="fadeIn first">
+		      <img src="../../../assets/nnagame.png" id="icon" alt="User Icon" />
+		      <h1>NNA Sport</h1>
+		    </div>
+
+				<form>
+					<div class="form-group">
+							<label for="email">email</label>
+							<input id="email" class="form-control" required type="email" name="email">
+					 </div>
+					 <div class="form-group">
+							<label for="password">password</label>
+							<input id="password" class="form-control" required type="password" name="password">
+					 </div>
+					 <div class="form-group">
+							<label for="keluarahan">Kelurahan</label>
+							<input id="kelurahan" class="form-control" required type="text" name="kelurahan">
+					 </div>
+					 <div class="form-group">
+							<label for="keluarahan">Hak Akses</label>
+							<input id="kelurahan" class="form-control" required type="text" placeholder="commitee" name="kelurahan">
+							<small text-danger>input commitee</small>
+					 </div>
+					 <button type="submit" class="btn btn-primary">Save</button>
+				</form>
+
+		    <div id="formFooter">
+				<a class="underlineHover text-dark" routerLink="signup">Go to the signup</a>
+				<br><small>signup with</small>
+				<br>
+				<a href="#" class="fab fa-facebook"></a> &nbsp;
+				<a href="#" class="fab fa-google"></a>
+		    </div>
+
+		  </div>
+		</div>

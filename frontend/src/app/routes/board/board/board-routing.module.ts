@@ -5,13 +5,14 @@ import { PlayerComponent } from '../../../components/board/player/player.compone
 import { BracketComponent } from '../../../components/board/bracket/bracket.component';
 import { BigmatchComponent } from '../../../components/board/bigmatch/bigmatch.component';
 import { MatchdayComponent } from '../../../components/board/matchday/matchday.component';
+import { TournamentMatchComponent } from '../../../components/board/tournament-match/tournament-match.component';
 
 const routes: Routes = [
   {path:'', component:BoardComponent,},
   {path:'bracket', component:BracketComponent,},
   {path:'player', component:PlayerComponent,},
   {path:'bigmatch', component:BigmatchComponent},
-  {path:'matchday', component:MatchdayComponent},
+  {path:'matchday', component:TournamentMatchComponent},
 ];
 
 @NgModule({

@@ -28,13 +28,13 @@ export class GamesService {
     return this.http.get<Games[]>(environment.urlAddress + 'product').pipe(map(this.getDataGame))
   }
 
-  createRuleTournament(game) {
-    return this.http.post<any>(`${environment.urlAddress}/createRules/:id`, game)
+  createRuleTournament(games) {
+      return this.http.post<any>(environment.urlAddress + 'createRules', games);
   }
 
-  createTournament(game) {
-    return this.http.post<any>(`${environment.urlAddress}/createGame/:id`, game)
-  }
+  // createTournament(games) {
+  //   return this.http.post<any>(`${environment.urlAddress}/createGame/:id`, games)
+  // }
 
 
 

@@ -42,6 +42,7 @@ import { ClubfootbalComponent } from './components/board/clubfootbal/clubfootbal
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,7 +67,7 @@ import { ClubfootbalComponent } from './components/board/clubfootbal/clubfootbal
     PagesearchComponent,
     FormffaComponent,
     SpinnerComponent,
-    ClubfootbalComponent
+    ClubfootbalComponent,
   ],
   imports: [
     BrowserModule,

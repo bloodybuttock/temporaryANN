@@ -6,16 +6,13 @@ import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { environment } from '../../../environments/environment';
 import { User } from '../../models/user';
-import { Role } from '../../models/role';
-// import * as firebase from 'firebase/app';
-// import 'firebase/auth';
-// import 'firebase/firestore';
-// import { AngularFireAuth } from "@angular/fire/auth";
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  endpoint = environment.urlAddress;
   headers = new HttpHeaders()
   .set(
     'Content-Types',
@@ -23,71 +20,19 @@ export class AuthService {
   );
   datauser = {}
 
-  constructor(private http:HttpClient, private router:Router) { }
+  constructor(private http:HttpClient, private router:Router ) { }
 
   private getUserdata(response){
     return response.data
   }
 
-  public getSession(): Promise<boolean> {
-  const session = localStorage.getItem('token');
-  return new Promise((resolve, reject) => {
-    if (session) {
-      return resolve(true);
-    } else {
-      return reject(false);
-    }
-  });
-}
-
-
-public getUserRoles(): Promise<string[]> {
- return new Promise((resolve, reject) => {
-   this.http.get(`${environment.urlAddress}getUserRoles`)
-   .pipe(catchError((error: any, caught: any) => {
-       reject(error);
-       return caught;
-     }),
-     map((res: any) => res.data))
-   .subscribe((role: string[]) => {
-     resolve(role);
-   });
- });
-}
-
-public areUserRolesAllowed(userRoles: string[], allowedUserRoles: Role[]): boolean {
-  for (const role of userRoles) {
-    for (const allowedRole of allowedUserRoles) {
-      if (role.toLowerCase() === allowedRole.toLowerCase()) {
-        return true;
-      }
-    }
-  }
-  return false;
-}
-
-
-  //sign with google
-  // GoogleAuth(){
-  //   return this.AuthLogin(new firebase.googleAuthProvider())
-  // }
-
-  // AuthLogin(provider){
-  //   return this.afAuth.signInWithPopup(provider)
-  //   .then((result)=>{
-  //       alert('you succes signin use google')
-  //   })
-  //   .catch((error)=>{
-  //     alert('error cant login')
-  //   })
-  // }
 
   signupUser(user){
-    return this.http.post<any>(`${environment.urlAddress}users/register`, user)
+    return this.http.post<any>(`${this.endpoint}users/signup`, user)
   }
 
   signinUser(user){
-    return this.http.post<any>(`${environment.urlAddress}users/login`, user)
+    return this.http.post<any>(`${this.endpoint}users/signin`, user)
   }
 
   login(){
@@ -95,7 +40,7 @@ public areUserRolesAllowed(userRoles: string[], allowedUserRoles: Role[]): boole
   }
 
   getUsername(){
-    return this.http.get<User[]>(environment.urlAddress + 'users').pipe(map(this.getUserdata))
+    return this.http.get<User[]>(this.endpoint + 'users').pipe(map(this.getUserdata))
   }
 
 
@@ -106,18 +51,17 @@ public areUserRolesAllowed(userRoles: string[], allowedUserRoles: Role[]): boole
     }
   }
 
-
   get isLogin(): boolean{
-      let token = localStorage.getItem('token');
+      let token = localStorage.getItem('access_token');
       return (token !==null) ? true : false
   }
 
   getToken(){
-      return localStorage.getItem('token');
+      return localStorage.getItem('access_token');
   }
 
-  getUserProfile(_id): Observable<any>{
-      let api = `${environment.urlAddress}user/${_id}`;
+  getUserProfile(_id:any): Observable<any>{
+      let api = `${this.endpoint}user/${_id}`;
       return this.http.get(api,{
           headers: this.headers
       }).pipe(

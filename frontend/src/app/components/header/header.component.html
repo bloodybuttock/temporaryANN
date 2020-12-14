@@ -23,14 +23,14 @@
   </ul>
 
   <ul class="navbar-nav ml-auto">
-    <a class="nav-link"    routerLink="sign">
+    <a class="nav-link" *ngIF="authService.login()" routerLink="sign">
       <button class="badge badge-primary">Login</button>
     </a>
-    <li class="nav-item dropdown" >
+    <li class="nav-item dropdown" *ngIF="!authService.getToken()" >
       <a  class="nav-link" data-toggle="dropdown" href="#">
       <i class="far fa-user"></i>
       </a>
-      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" *ngIf="">
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         <a href="#" class="dropdown-item">
           <div class="media">
           <strong>Message</strong>

@@ -5,10 +5,11 @@ import { AddgameComponent } from '../../components/admin/addgame/addgame.compone
 import { GetdataComponent } from '../../components/admin/getdata/getdata.component';
 import { LurahComponent } from '../../components/admin/lurah/lurah.component';
 import { SidbarComponent } from '../../components/admin/sidbar/sidbar.component';
+import { AuthGuard } from '../../services/auth/auth.guard';
 
 
 const routes: Routes = [
-  {path:'', component:AdminComponent},
+  {path:'', component:AdminComponent, canActivate:[AuthGuard]},
   {path:'addgame', component:AddgameComponent},
   {path:'getdata', component:GetdataComponent},
   {path:'lurah', component:LurahComponent},
