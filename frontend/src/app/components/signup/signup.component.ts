@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 import { HttpClient  } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
@@ -26,7 +25,7 @@ export class SignupComponent implements OnInit {
     .subscribe(
       res =>{
       console.log(res)
-      res => this.router.navigate([""])
+      res => this.router.navigate(['login/notif', {queryParams: { registered: 'true' } }]);
     },
     )
   }

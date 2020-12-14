@@ -1,6 +1,6 @@
-export enum Role {
-    USER = 'USER',
-    ADMIN = 'ADMIN',
-    PANITIA = 'PANITIA',
-    LURAH = 'LURAH'
+export enum Roles {
+  ADMIN = 'ADMIN',
+  BUYER = 'BUYER',
+  SELLER = 'SELLER',
+  DATA_MANAGER = 'DATA MANAGER'
 }

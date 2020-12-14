@@ -38,6 +38,7 @@
               "./node_modules/ng-tournament-tree/styles/ngtt-single-elimination-styles.scss",
               "./node_modules/ng-tournament-tree/styles/ngtt-double-elimination-styles.scss",
               "./node_modules/ng-tournament-tree/styles/ngtt-variables.scss",
+              "./node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": [

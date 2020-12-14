@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, CanActivate} from '@angular/router';
-import { Role  } from './models/index';
 import { CommentComponent } from './components/comment/comment.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NotifregisterComponent } from './components/notifregister/notifregister.component';

@@ -19,7 +19,7 @@ export class MatchdayComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+
 
   }
 

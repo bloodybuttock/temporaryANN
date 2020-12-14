@@ -39,6 +39,14 @@ export class AuthService {
     return !!localStorage.getItem('access_token')
   }
 
+  forgetPassword(user){
+    return this.http.post<any>(`${this.endpoint}user/forget`, user)
+  }
+
+  resetPassword(user){
+    return this.http.post<any>(`${this.endpoint}user/reset`, user)
+  }
+
   getUsername(){
     return this.http.get<User[]>(this.endpoint + 'user').pipe(map(this.getUserdata))
   }
