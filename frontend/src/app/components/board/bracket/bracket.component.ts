@@ -40,6 +40,13 @@ export class BracketComponent implements OnInit {
    $('#minimal').bracket({
     init: this.minimalData /* data to initialize the bracket with */
   })
-
  }
+
+ // this.gamesService.getGame()
+ // .subscribe(
+ //   data=>
+ //   {
+ //     this.gameslist = data;
+ //   }
+
 }

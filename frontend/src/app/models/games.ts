@@ -1,13 +1,12 @@
 // import { FakeBackend } from '../services/helper/fake-backend';
 
 export class Games{
-        image:string;
-        nama:string;
-        description:string;
-        participant:string;
-        matchday:string;
-        type:string;
-        id:string;
-        join:string;
+        tournamentName:string;
+        tournamentOpen:string;
+        tournamentStart:string;
+        tournamentClose:string;
+        tournamentType:string;
+        rulesName:string;
+        groupEntry:string;
         next:string;
 }

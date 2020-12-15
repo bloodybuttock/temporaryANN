@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
-// declare var $:any;
 
 @Component({
   selector: 'app-header',
@@ -13,7 +12,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(){
 
-    // $("span").css("color","red");
   }
 
 }

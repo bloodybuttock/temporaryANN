@@ -36,9 +36,9 @@ import { CardGameComponent } from './components/card-game/card-game.component';
 import { ChatmeComponent } from './components/chatme/chatme.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { PagesearchComponent } from './components/pagesearch/pagesearch.component';
-import { FormffaComponent } from './components/board/formffa/formffa.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { ClubfootbalComponent } from './components/board/clubfootbal/clubfootbal.component';
+
 
 
 
@@ -64,9 +64,8 @@ import { ClubfootbalComponent } from './components/board/clubfootbal/clubfootbal
     ChatmeComponent,
     ChatComponent,
     PagesearchComponent,
-    FormffaComponent,
     SpinnerComponent,
-    ClubfootbalComponent
+    ClubfootbalComponent,
   ],
   imports: [
     BrowserModule,

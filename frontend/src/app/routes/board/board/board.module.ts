@@ -8,7 +8,7 @@ import { BigmatchComponent } from '../../../components/board/bigmatch/bigmatch.c
 import { MatchdayComponent } from '../../../components/board/matchday/matchday.component';
 import { OpengameComponent } from '../../../components/opengame/opengame.component';
 import { TournamentMatchComponent } from '../../../components/board/tournament-match/tournament-match.component';
-
+import { FormffaComponent } from '../../../components/board/formffa/formffa.component';
 
 import { BoardRoutingModule } from './board-routing.module';
 
@@ -23,6 +23,7 @@ import { BoardRoutingModule } from './board-routing.module';
     BigmatchComponent,
     OpengameComponent,
     TournamentMatchComponent,
+    FormffaComponent,
     MatchdayComponent
     ],
   imports: [
