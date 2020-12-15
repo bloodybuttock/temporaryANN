@@ -23,7 +23,7 @@ export class GamesService {
   }
 
   public getGame(): Observable<Games[]> {
-    return this.http.get<Games[]>(environment.urlAddress + 'product').pipe(map(this.getDataGame))
+    return this.http.get<Games[]>(environment.urlAddress + 'user/tournaments?page=1&i=csgo').pipe(map(this.getDataGame))
   }
 
   createRuleTournament(games) {

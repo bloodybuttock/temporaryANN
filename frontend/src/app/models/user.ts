@@ -1,3 +1,4 @@
+import { Roles } from './role';
 
 export class User {
     id: number;
@@ -10,6 +11,6 @@ export class User {
     picture:string;
     subdistrict:number;
     verifyingToken:string;
-    role: Role;
+    role: Roles;
     token?: string;
   }
